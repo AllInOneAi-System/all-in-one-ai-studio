@@ -289,6 +289,28 @@ hr { border-color: var(--border) !important; margin: 0.8rem 0 !important; }
     font-size: 12px;
 }
 .stat-row:last-child { border-bottom: none; }
+
+/* ── Lock sidebar width + hide collapse button ── */
+[data-testid="stSidebar"] {
+    min-width: 210px !important;
+    max-width: 210px !important;
+    overflow: hidden !important;
+}
+[data-testid="stSidebarCollapseButton"] { display: none !important; }
+section[data-testid="collapsedControl"] { display: none !important; }
+button[data-testid="baseButton-header"] { display: none !important; }
+
+/* ── Lock horizontal scroll ── */
+.main .block-container { overflow-x: hidden !important; }
+
+/* ── Standard button same height as High Quality and Ultra ── */
+.stButton > button {
+    min-height: 70px !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
